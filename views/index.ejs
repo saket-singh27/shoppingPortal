@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Portal</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Shopping Portal</h1>
+    
+    <form id="addTaskForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="text" id="status" placeholder="Status" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        async function fetchTasks() {
+            const response = await axios.get('/tasks');
+            const tasks = response.data;
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            tasks.forEach(task => {
+                const li = document.createElement('li');
+                li.textContent = `${task.title} - ${task.description} - ${task.status}`;
+                taskList.appendChild(li);
+            });
+        }
+
+        async function addTask(event) {
+            event.preventDefault();
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const status = document.getElementById('status').value;
+            try {
+                await axios.post('/tasks', { title, description, status });
+                fetchTasks();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        const addTaskForm = document.getElementById('addTaskForm');
+        addTaskForm.addEventListener('submit', addTask);
+
+        fetchTasks();
+    </script>
+</body>
+</html>
