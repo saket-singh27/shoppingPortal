@@ -25,6 +25,7 @@ const shoppingSchema = new mongoose.Schema({
         unique : true,
         lowercase : true
       },
+      
       description: {
         type : String,
         required : true,
