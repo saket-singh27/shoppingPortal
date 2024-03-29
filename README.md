@@ -15,11 +15,11 @@
 <p>This is a simple shopping portal project with a RESTful API backend and a basic frontend.</p>
 
 <h3>Features</h3>
-<p><li>- Allows users to add, fetch, update, and delete tasks.</li>
-<li>- Tasks have a title, description, status, creation timestamp, and last update timestamp.</li>
-<li>- Backend is built with Node.js and Express.</li>
-<li>- Data storage is managed with MongoDB.</li>
-<li>- Frontend is implemented using HTML, CSS, and JavaScript with EJS templating.</li></p>
+<p><li> Allows users to add, fetch, update, and delete tasks.</li>
+<li> Tasks have a title, description, status, creation timestamp, and last update timestamp.</li>
+<li> Backend is built with Node.js and Express.</li>
+<li> Data storage is managed with MongoDB.</li>
+<li> Frontend is implemented using HTML, CSS, and JavaScript with EJS templating.</li></p>
 
 <h4>Prerequisites</h4>
 <p>- Node.js installed on your machine
@@ -32,3 +32,17 @@
    ```bash
    git clone <repository-url>
    cd shopping-portal</p>
+<p>Open your web browser and navigate to http://localhost:3000 to access the shopping portal.</p>
+
+<h2>API Endpoints</h2>
+<p>
+   <li>POST /tasks: Create a new task.</li>
+   <li>GET /tasks: Fetch all tasks.</li>
+   <li>PUT /tasks/:id: Update a task by ID.</li>
+   <li>DELETE /tasks/:id: Delete a task by ID.</li>
+</p>
+
+<h3>Frontend</h3>
+<li>The frontend is served at the root URL.</li>
+<li>Users can add tasks using the provided form and view the list of tasks.</li>
+<li>The frontend uses Axios for making HTTP requests to the backend.</li>
