@@ -15,11 +15,11 @@
 <p>This is a simple shopping portal project with a RESTful API backend and a basic frontend.</p>
 
 <h3>Features</h3>
-<p>- Allows users to add, fetch, update, and delete tasks.
-- Tasks have a title, description, status, creation timestamp, and last update timestamp.
-- Backend is built with Node.js and Express.
-- Data storage is managed with MongoDB.
-- Frontend is implemented using HTML, CSS, and JavaScript with EJS templating.</p>
+<p><li>- Allows users to add, fetch, update, and delete tasks.</li>
+<li>- Tasks have a title, description, status, creation timestamp, and last update timestamp.</li>
+<li>- Backend is built with Node.js and Express.</li>
+<li>- Data storage is managed with MongoDB.</li>
+<li>- Frontend is implemented using HTML, CSS, and JavaScript with EJS templating.</li></p>
 
 <h4>Prerequisites</h4>
 <p>- Node.js installed on your machine
